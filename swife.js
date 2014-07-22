@@ -1,14 +1,14 @@
 function Swife(target, options){
 	if(target == null){
-		console.log(new Error("Swife: 'target' is NULL."));
+		console.warn("Swife: 'target' is NULL.");
 		return;
 	}
 	if(target.jquery == undefined){
-		console.log(new Error("Swife: 'target' MUST be a jQuery object."));
+		console.warn("Swife: 'target' MUST be a jQuery object.");
 		return;
 	}
 	if(target.length == 0){
-		console.log(new Error("Swife: 'target' is NOT defined."));
+		console.warn("Swife: 'target' is NOT defined.");
 		return;
 	}
 	
@@ -405,7 +405,7 @@ function Swife(target, options){
 		setIndex:function(index, animation){// slide to index
 			var idx = parseInt(index, 10);
 			if(isNaN(idx)){
-				console.log(new Error("Swife: 'index' is NOT a number."));
+				console.warn("Swife: 'index' is NOT a number.");
 				return;
 			}
 			
